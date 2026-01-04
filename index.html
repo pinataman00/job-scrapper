@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobs Scrapper</title>
+  </head>
+  <body>
+    <h1>😺 Job Scrapper</h1>
+    <h4>What job do you want?</h4>
+    <!-- <form action="/search" method="get"> -->
+      <input
+        type="text"
+        id="keyword"
+        placeholder="python, javascript, java"
+      />
+      <button onclick="search()">Search</button>
+    <!-- </form> -->
+    <script>
+    function search() {
+      const keyword = document.getElementById('keyword').value.toLowerCase();
+      const validKeywords = ['python', 'javascript', 'java'];
+      if (validKeywords.includes(keyword)) {
+        window.location.href = 'search/' + keyword + '.html';
+      } else {
+        alert('python, javascript, java 중에서 선택해주세요!');
+      }
+    }
+  </script>
+  </body>
+</html>
